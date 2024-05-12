@@ -1,0 +1,19 @@
+
+<app-add-todo (todoAdd)="addtodo($event)" ></app-add-todo>
+<h1 class="my-3" style="text-align: center;">Your Todo</h1>
+@if(todos.length===0){
+  <div>No todo To disalpay</div>
+}
+@else{
+@for(todo of todos ; track $index){
+<app-todo-item [todo]="todo" (todoDelete)="deletetode(todo)" ></app-todo-item>
+}
+}
+
+
+
+
+
+
+
+

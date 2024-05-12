@@ -1,0 +1,14 @@
+<div class="container">
+  <h2 class="my-3" style="text-align: center;">Add Todo</h2>
+    <form (ngSubmit)="handlesubmit()" >
+        <div class="mb-3">
+          <label for="title" class="form-label">Todo Title</label>
+          <input type="text" [(ngModel)] ="title"  class="form-control" [ngModelOptions]="{ standalone: true }" id="text" aria-describedby="emailHelp">
+          </div>
+        <div class="mb-3">
+          <label for="desc" class="form-label">Todo Description</label>
+          <input type="text" [(ngModel)] ="desc"  [ngModelOptions]="{ standalone: true }" class="form-control" id="exampleInputPassword1">
+        </div>
+        <button type="submit" class="btn btn-primary" >Add Todo</button>
+    </form>
+</div>
